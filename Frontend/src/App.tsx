@@ -21,6 +21,8 @@ import Signup from './pages/User/Signup';
 import Cart from './pages/Website/Cart/Cart';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Pay from './pages/Website/Pay/Pay';
+import HomePage from './layouts/HomePage';
 
 function App() {
   const [products, setProducts] = useState<IProduct[]>([])
@@ -44,9 +46,10 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="" element={<WebLayout />} >
+          <Route index element={<HomePage/>}/>
           <Route path='cart' element={<Cart />} />
-         
-        </Route>
+          <Route path='pay' element={<Pay />} />
+        </Route> 
         <Route path='login' element={<Login />} />
         <Route path='signup' element={<Signup />} />
 
