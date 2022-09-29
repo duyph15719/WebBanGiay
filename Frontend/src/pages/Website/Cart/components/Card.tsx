@@ -1,8 +1,8 @@
 import { IconESC } from "../../../../components/Icons/IconESC";
 
 interface ButtonProps {
-    name:string;
-    price:string;
+    name: string;
+    price: string;
     amount: string;
     total: string;
     id?: string;
@@ -11,16 +11,16 @@ interface ButtonProps {
 
 
 export const CardComponents = (props: ButtonProps) => {
-    const { name, price,img, amount, total, id } = props
+    const { name, price, img, amount, total, id } = props
     return (
         <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
             <div className="flex w-2/5"> {/* product */}
                 <div className="mx-5 grid  place-items-center ">
                     <IconESC customStyle="" />
                 </div>
-                <div className="flex flex-col justify-between ml-4 flex-grow">
-                    <span className="font-bold text-sm">{name}</span>
-                    <img src={img} alt="" className="w-48" />
+                <div className="flex text-center  ml-4">
+                    <img src={img} alt="" className="w-20" />
+                    <span className="font-bold text-sm mt-7 mx-5 ">{name}</span>
                 </div>
             </div>
             <div className="flex justify-center w-1/5">

@@ -1,18 +1,21 @@
 import { Outlet } from 'react-router-dom'
+
+import Footer from '../pages/Website/Footer/Footer'
 import Header from '../pages/Website/header/header'
 
 type Props = {}
 
 const WebLayout = (props: Props) => {
   return (
-    <><header>
+    <>
       <Header />
-    </header>
-      <div>
+     
+      
         <main>
           <Outlet />
         </main>
-      </div></>
+      <Footer/>
+      </>
   )
 }
 
