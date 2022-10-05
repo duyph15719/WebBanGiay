@@ -16,20 +16,26 @@ const Users = (props: Props) => {
             </div>
             <table className="w-full border">
                 <thead>
-                    <THComponent />
+                <tr className="bg-gray-50 border-b">
+                        <THComponent children="Id" />
+                        <THComponent children="Name" />
+                        <THComponent children="Email" />
+                        <THComponent children="Image" />
+                        <THComponent children="Action" />
+                    </tr>
                 </thead>
                 <tbody>
                     {props.user.map((item, index) => {
-                        return <>
-                            <TDComponent id={index + 1}
-                                name={item.name}
-                                email={item.name}
-                                image={item.image}
-                                children={<>
+                        return <tr className="bg-gray-100 text-center border-b text-sm text-gray-600"   >
+                            <TDComponent children={index + 1} />
+                            <TDComponent children={item.name} />
+                            <TDComponent children={item.email} />
+                            <TDComponent children={<img className=' w-20 h-20 ' src={item.image} alt="" />} />
+                            <TDComponent children={<>
                                     <ButtonComponent customStyle="bg-blue-500 text-white" >Edit</ButtonComponent>
                                     <ButtonComponent customStyle="bg-red-500 text-white " >Remove</ButtonComponent>
                                 </>} />
-                        </>
+                                </tr>
                     })}
 
                 </tbody>

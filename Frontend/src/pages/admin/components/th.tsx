@@ -1,27 +1,19 @@
 import { IconRoud } from "../../../components/Icons/IconRoud";
 
 
-const data = [
-    { name: 'ID' },
-    { name: 'Name' },
-    { name: "Email" },
-    { name: "Image" },
-    { name: "Action" },
-]
+interface ButtonProps {
+    children?: any;
+}
 
 
-export const THComponent = (props: any) => {
-
+export const THComponent = (props: ButtonProps) => {
+    const { children } = props
     return (
-        <tr>
-            {data.map((row) => (
-                <th className="p-2 border-r cursor-pointer text-sm font-thin text-gray-500">
-                    <div className="flex items-center justify-center">
-                        {row.name}
-                        <IconRoud />
-                    </div>
-                </th>
-            ))}
-        </tr>
+        <th className="p-2 border-r cursor-pointer text-sm font-thin text-gray-500">
+            <div className="flex items-center justify-center">
+                {children}
+                <IconRoud />
+            </div>
+        </th>
     )
 }
