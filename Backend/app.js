@@ -9,7 +9,7 @@ import userRoute from './routes/user'
 
 const app = express();
 
-const URL = 'mongodb+srv://duynguyen:Adu113210@cluster0.1axucv2.mongodb.net/?retryWrites=true&w=majority';
+const URL = 'mongodb+srv://duynguyen:Adu113210@cluster0.fh8cjz8.mongodb.net/?retryWrites=true&w=majority';
 // middleware
 app.use(cors());
 app.use(morgan('tiny'));

@@ -20,6 +20,9 @@ const userSchema = new Schema({
     role: {
         type: Number,
         default: 0
+    },
+    image:{
+        type: String,
     }
 }, { timestamps: true});
 
